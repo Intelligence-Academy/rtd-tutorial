@@ -1,5 +1,5 @@
-TensorfFlow
-=====
+TensorFlow
+==========
 
 .. _installation:
 
@@ -26,9 +26,27 @@ will raise an exception.
 
 .. autoexception:: lumache.InvalidKindError
 
-For example:
+For example::
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+   >>> import lumache
+   >>> lumache.get_random_ingredients()
+   ['shells', 'gorgonzola', 'parsley']
 
+
+Chapters
+--------
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 📖 Chapters
+
+   chapter01
+   chapter02
+   chapter03
+   chapter04
+   chapter05
+   chapter06
+   chapter07
+   chapter08
+   chapter09
+   chapter10
