@@ -1,2 +1,15 @@
-sphinx==7.1.2
-sphinx-rtd-theme==1.3.0rc1
+# docs/requirements.txt
+
+# Core Sphinx
+sphinx>=4.0
+
+# Your theme and extensions
+pydata-sphinx-theme
+myst-parser
+
+# Optional: if you have legacy .rst files or need RTD’s theme
+sphinx-rtd-theme
+
+# Any other extensions you use
+# sphinx-autodoc-typehints
+# sphinxcontrib-httpdomain
