@@ -14,5 +14,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   TensorfFlow
+   Pytorch
+   Scikit-Learn
