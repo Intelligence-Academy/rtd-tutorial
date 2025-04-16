@@ -1,6 +1,88 @@
 {% extends "!layout.html" %}
 
 {%- block extrahead %}
- <!-- Place this tag in your head or just before your close body tag. -->
- <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- 🔗 GitHub Buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- 🌟 Custom Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- 🌈 Custom Styles -->
+  <style>
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #f9f9fc;
+      color: #333;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    code, pre {
+      font-family: 'Fira Code', monospace;
+      background-color: #f3f4f6;
+      color: #111827;
+      border-radius: 6px;
+      padding: 0.3em 0.6em;
+    }
+
+    .wy-side-nav-search {
+      background: linear-gradient(90deg, #2c3e50, #34495e);
+    }
+
+    .wy-side-nav-search input[type="text"] {
+      border-radius: 8px;
+      border: none;
+      padding: 6px 10px;
+      background-color: #ecf0f1;
+    }
+
+    .wy-menu a {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .wy-menu a:hover {
+      color: #e67e22 !important;
+      font-weight: 600;
+      transform: scale(1.02);
+    }
+
+    .github-button-wrapper {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    /* 🌟 Footer tweaks */
+    .rst-footer {
+      background: #f3f4f6;
+      color: #888;
+      font-size: 14px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .rst-footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+  </style>
+{% endblock %}
+
+{%- block sidebartitle %}
+  {{ super() }}
+  <!-- 📌 Add GitHub Star Button -->
+  <div class="github-button-wrapper">
+    <a class="github-button"
+       href="https://github.com/your-org/your-repo"
+       data-icon="octicon-star"
+       data-size="large"
+       data-show-count="true"
+       aria-label="Star your-org/your-repo on GitHub">
+       Star
+    </a>
+  </div>
 {% endblock %}
