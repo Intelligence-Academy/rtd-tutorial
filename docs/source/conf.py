@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Documentation'
+project = 'Intelligence Academy'
 copyright = '2025, Intelligence Academy'
 author = 'Intelligence Academy'
 
