@@ -1,22 +1,19 @@
 # .readthedocs.yaml
 version: 2
 
-# Which Python version to use
+build:
+  os: ubuntu-22.04          # or ubuntu-20.04
+  image: latest             # latest RTD build image
+
 python:
-  version: "3.10"
   install:
-    # 1) Install your project in editable mode (so autodoc can import it)
+    # 1) install your package so autodoc can import it
     - method: pip
       path: .
-    # 2) Install docs‑specific requirements
+    # 2) install all docs-specific dependencies
     - requirements: docs/requirements.txt
 
-# Use the latest RTD build image
-build:
-  image: latest
-
-# Sphinx builder settings
 sphinx:
-  builder: html
   configuration: docs/conf.py
   source-directory: docs
+  builder: html

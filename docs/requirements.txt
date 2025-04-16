@@ -1,15 +1,15 @@
 # docs/requirements.txt
 
-# Core Sphinx
-sphinx>=4.0
+# Minimum Sphinx
+sphinx>=5.0
 
-# Your theme and extensions
+# Your theme and Markdown support
 pydata-sphinx-theme
 myst-parser
 
-# Optional: if you have legacy .rst files or need RTD’s theme
+# Legacy compatibility (if you still have sphinx_rtd_theme references)
 sphinx-rtd-theme
 
-# Any other extensions you use
+# Any extensions you use...
 # sphinx-autodoc-typehints
 # sphinxcontrib-httpdomain
