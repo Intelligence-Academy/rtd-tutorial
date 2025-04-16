@@ -1,94 +1,68 @@
-{% extends "!layout.html" %}
-
-{%- block extrahead %}
-  <!-- GitHub Buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
-
-  <!-- Custom Styling -->
-  <style>
-    body {
-      font-family: 'Fira Sans', sans-serif;
-      background-color: #f9f9fc;
-      color: #333;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      color: #1f2937;
-    }
-
-    .sidebar-social {
-      padding: 1rem;
-      background-color: #f3f4f6;
-      margin: 1rem 0;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .sidebar-social iframe,
-    .sidebar-social a {
-      display: block;
-      margin: 8px auto;
-    }
-
-    .sidebar-social a.github-button {
-      display: inline-block;
-    }
-
-    .twitter-follow-button {
-      margin-top: 8px;
-    }
-
-    .rst-footer {
-      background: #f3f4f6;
-      color: #888;
-      font-size: 14px;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
-{% endblock %}
-
-{%- block sidebartitle %}
-  {{ super() }}
-
-  <!-- 🎉 Social Sidebar Addon (Customized for ahammadmejbah) -->
-  <div class="sidebar-social">
-    <!-- GitHub Follow Button -->
+<div class="sidebar-social-wrapper">
+  <div class="sidebar-social-block">
+    <!-- 🌟 GitHub Follow Button -->
     <iframe src="https://ghbtns.com/github-btn.html?user=ahammadmejbah&type=follow&count=false"
             allowtransparency="true" frameborder="0" scrolling="0"
-            width="200" height="20"></iframe>
+            width="180" height="20" title="GitHub Follow Button"></iframe>
 
-    <!-- GitHub Sponsor Button -->
+    <!-- ❤️ Sponsor Button -->
     <a class="github-button"
        href="https://github.com/sponsors/ahammadmejbah"
        data-icon="octicon-heart"
+       data-size="large"
        aria-label="Sponsor @ahammadmejbah on GitHub">
-       ❤️ Sponsor @ahammadmejbah
+       Sponsor @ahammadmejbah
     </a>
 
-    <!-- Twitter Follow Button -->
+    <!-- 🐦 Twitter Follow Button -->
     <a href="https://twitter.com/ahammadmejbah"
        class="twitter-follow-button"
+       data-size="large"
        data-show-count="false">
        Follow @ahammadmejbah
     </a>
   </div>
+</div>
 
-  <!-- Twitter Widget Script -->
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0],
-          p=/^http:/.test(d.location)?'http':'https';
-      if(!d.getElementById(id)){
-        js=d.createElement(s);js.id=id;
-        js.src=p+'://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document, 'script', 'twitter-wjs');
-  </script>
-{% endblock %}
+<!-- Load Twitter Widget Script -->
+<script>
+  !function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+    if(!d.getElementById(id)){
+      js=d.createElement(s);js.id=id;
+      js.src=p+'://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document, 'script', 'twitter-wjs');
+</script>
+
+<!-- Add Custom Styling -->
+<style>
+  .sidebar-social-wrapper {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+
+  .sidebar-social-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .sidebar-social-block a.github-button,
+  .sidebar-social-block a.twitter-follow-button {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .sidebar-social-block iframe {
+    border: none;
+  }
+</style>
